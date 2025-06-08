@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Unique Glass</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+     <!-- Favicon -->
+     <link
+     rel="icon"
+     href="assets/images/logo/unique_glass.ico"
+     type="image/x-icon"
+   />
+   <link rel="apple-touch-icon" href="assets/images/logo/unique_glass.png" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    >
+  </script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "xcSN8Q2c_KGeBDH4l",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("service_byq0xy6","template_n9zi14p", this).then(
+              () => {
+                console.log("SUCCESS!");
+                alert("Request sent successfully!");
+                this.reset();
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Navbar placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      // Function to load external HTML components
+      function loadComponent(url, targetElementId, callback) {
+        fetch(url)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`Error loading ${url}: ${response.statusText}`);
+            }
+            return response.text();
+          })
+          .then((data) => {
+            document.getElementById(targetElementId).innerHTML = data;
+            if (callback) callback(); // Call the callback after loading the component
+          })
+          .catch((error) => {
+            console.error(error);
+            document.getElementById(
+              targetElementId
+            ).innerHTML = `<p>Unable to load content. Please try again later.</p>`;
+          });
+      }
+
+      // Load the navbar and footer HTML
+      loadComponent("/components/header.html", "navbar-placeholder");
+      loadComponent("/components/footer.html", "footer-placeholder");
+    </script>
+    <section class="py-5">
+      <div class="container text-white">
+        <div class="row g-5">
+          <div class="col-md-6" data-aos="fade-right">
+            <h2 class="text-danger mb-4">Contact Us</h2>
+            <p class="mb-3">
+              <strong>Email:</strong>
+              <a
+                href="mailto:uniqueglass04@gmail.com"
+                class="text-decoration-none text-light"
+                >uniqueglass04@gmail.com</a
+              >
+            </p>
+            <p class="mb-3">
+              <strong>Phone:</strong>
+              <a href="tel:8141474665" class="text-decoration-none text-light"
+                >81414 74665</a
+              >
+            </p>
+            <p class="mb-3">
+              <strong>Address:</strong><br />
+              Shop No. 1, Bhargav Appartment,<br />
+              Godown Road, Opp. Ambika Way Bridge,<br />
+              Near Bhavani Enterprise,<br />
+              Rajkot, Gujarat 360002
+            </p>
+          </div>
+         
+          <div class="col-md-6" data-aos="fade-left">
+            <h4 class="text-white mb-4">Send a Message</h4>
+            <form method="POST" class="row g-3" id="contact-form">
+              <div class="col-md-12">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control bg-dark text-white border-secondary"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="tel"
+                  name="mobile"
+                  class="form-control bg-dark text-white border-secondary"
+                  placeholder="Your Mobile No."
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control bg-dark text-white border-secondary"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="text"
+                  name="subject"
+                  class="form-control bg-dark text-white border-secondary"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <textarea
+                  name="message"
+                  class="form-control bg-dark text-white border-secondary"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-danger px-4">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="mt-5" data-aos="fade-up">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1845.8886394576887!2d70.7927122386037!3d22.2864250949242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cbfada004353%3A0x199f7f9e78c3dca!2sunique%20glass!5e0!3m2!1sen!2sin!4v1748933044402!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style="border: 0; border-radius: 20px"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <a
+    href="https://wa.me/918141474665"  
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+
+    <!-- Footer -->
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
+  </body>
+</html>
