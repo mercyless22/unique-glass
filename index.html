@@ -34,30 +34,48 @@
     <!-- Custom CSS -->
     <link href="/assets/css/styles.css" rel="stylesheet" />
     <style>
-    .masonry-gallery {
+   .masonry-gallery {
   column-count: 5;
   column-gap: 1rem;
   max-width: 100%;
   width: 100%;
-  overflow: hidden; /* Prevent overflow issues */
+  overflow: hidden;
+  padding: 0 0.5rem; /* optional: padding to add small spacing on edges */
+}
+
+/* Responsive columns */
+@media (max-width: 1200px) {
+  .masonry-gallery {
+    column-count: 4;
+  }
 }
 @media (max-width: 992px) {
   .masonry-gallery {
     column-count: 3;
   }
 }
-
+@media (max-width: 768px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
 
 .masonry-gallery img {
   width: 100%;
   height: auto;
   display: block;
-  margin: 1rem;
+  margin-bottom: 1rem; /* only vertical spacing */
   border-radius: 12px;
   transition: transform 0.3s ease-in-out;
   object-fit: cover;
-  break-inside: avoid; /* Important for masonry layout on Safari/iOS */
+  break-inside: avoid;
 }
+
 .masonry-gallery img:hover {
   transform: scale(1.03);
 }
