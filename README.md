@@ -36,32 +36,21 @@ The design ensures mobile-friendliness, smooth animations, and a professional la
 
 ## 📷 Screenshots  
 
-Create a `screenshots/` folder in your project and add the following images:  
-
-```
-
-screenshots/
-├── homepage.png
-├── about.png
-├── products.png
-├── services.png
-├── contact.png
-
-````
-
-Example usage in README:  
 
 - **Homepage**  
   ![Homepage Screenshot](screenshots/homepage.png)  
 
-- **About Section**  
-  ![About Screenshot](screenshots/about.png)  
+- **Huzee smart locks Section**  
+  ![About Screenshot](screenshots/huzee.png)  
 
-- **Products Section**  
-  ![Products Screenshot](screenshots/products.png)  
+- **Led Mirror Section**  
+  ![Products Screenshot](screenshots/led.png)  
 
-- **Services Section**  
-  ![Services Screenshot](screenshots/services.png)  
+- **Strainers and filters Section**  
+  ![Services Screenshot](screenshots/strainers.png)  
+
+- **About Us Section**  
+  ![Services Screenshot](screenshots/about.png)
 
 - **Contact Section**  
   ![Contact Screenshot](screenshots/contact.png)  
@@ -110,14 +99,3 @@ This project is licensed under the **MIT License** – free to use and modify wi
 ---
 
 ⭐️ Developed by [Taher M Travadi](https://github.com/mercyless22) with ❤️
-
-```
-
----
-
-For the **short description (GitHub repo tagline)**, you can use:  
-
-**“Responsive business website for Unique Glass Rajkot, built with HTML, CSS, JS, Bootstrap, AOS, and EmailJS.”**  
-
-Do you want me to also create a **generic screenshot placeholder pack** (with labels like “Homepage”, “About”, etc.) so you can drop them in until you capture the real ones?
-```
