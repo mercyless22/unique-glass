@@ -64,7 +64,7 @@ The website is hosted on a **custom domain**:
 To run locally:  
 ```bash
 # Clone the repository
-git clone https://github.com/mercyless22/unique-glass-website.git
+git clone https://github.com/mercyless22/unique-glass.git
 
 # Navigate into the project folder
 cd unique-glass-website
